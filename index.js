@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 
 const app = express();
 
-app.get('/article', (req, res) => {
+app.get('/api/article', (req, res) => {
   superagent.get('https://meiriyiwen.com/random').end((err, response) => {
     if (err) {
       res.send({ title:"抱歉", content:"发生了错误,请刷新重试" });
